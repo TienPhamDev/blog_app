@@ -1,16 +1,15 @@
-// import menuSvg from '../public/images/icon-menu.svg'
-// import menuClose from '../public/images/icon-menu-close.svg';
-const menuBtn = () => {
-    const menuButton = document.querySelector('#menu');
+import menuSvg from '../images/icon-menu.svg';
+import menuClose from '../images/icon-menu-close.svg';
+const menuBtn = (menuBtn,navMobile) => {
     const imgMenu = document.querySelector('#menu img');
-    // Select the nav element
-    const nav = document.querySelector('nav');
     
-    menuButton.addEventListener('click', () => {
-        menuButton.classList.toggle('bg-neutral-900');
+    
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('bg-neutral-800');
+        imgMenu.src = imgMenu.src === menuSvg ? menuClose : menuSvg;
 
         // Toggle the hidden class on the nav element
-        nav.classList.toggle('hidden');
+        navMobile.classList.toggle('hidden');
     });
     
 }
