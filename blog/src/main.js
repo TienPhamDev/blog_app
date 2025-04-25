@@ -7,6 +7,7 @@ import menuSvg from './images/icon-menu.svg'
 import moon from './images/icon-moon.svg'
 import logo from './images/image-avatar.jpg'
 import menuBtn from './utilities/menuBtn.js'
+import latestPosts from './render/latestPosts.js';
 
 document.querySelector('#app').innerHTML = `
   <div class="container mx-auto bg-neutral-100 px-[16px] py-[16px]">
@@ -41,28 +42,28 @@ document.querySelector('#app').innerHTML = `
         </ul>
       </nav>  
       <article class="mt-[16px]">
-        <h1 class="z-10 text-bold text-[32px] relative before:absolute before:bottom-[17%] before:z-[-10] before:w-[248px] before:h-[6px] before:bg-amber-600">Hi ! I'm Tien Pham 👋</h1>
+        <h1 class="z-10 mb-[32px] font-black text-[32px] relative before:absolute before:bottom-[17%] before:z-[-10] before:w-[248px] before:h-[6px] before:bg-amber-600">Hi ! I'm Tien Pham 👋</h1>
         <p>I’m on a journey to become a front-end web developer. I love building little projects, trying out new coding techniques, and sharing what I learn along the way. When I’m not at my desk, you’ll find me reading, hiking through the mountains, or challenging myself on rock-climbing walls.
   I started this blog to document my progress, keep myself accountable, and hopefully inspire anyone else who’s learning to code. Welcome to my corner of the internet, and thanks for stopping by!
         </p>
         <section id="social-media">
-          <ul class="flex gap-4">
-            <li>
+          <ul class="flex gap-4 my-[32px] items-center">
+            <li class="bg-white flex justify-center items-center rounded-[12px] size-10 border-1 border-neutral-200 p-2">
               <a href="#">
                 <img src=${logoX} alt="Logo X" />
               </a>
             </li>
-            <li>
+            <li class="bg-white flex justify-center items-center rounded-[12px] size-10 border-1 border-neutral-200 p-2">
               <a href="#">
                 <img src=${logoGithub} alt="Logo Github" />
               </a>
             </li>
-            <li>
+            <li class="bg-white flex justify-center items-center rounded-[12px] size-10 border-1 border-neutral-200 p-2">
               <a href="#">
                 <img src=${logoLinkedin} alt="Logo Linkedin" />
               </a>
             </li>
-            <li>
+            <li class="bg-white flex justify-center items-center rounded-[12px] size-10 border-1 border-neutral-200 p-2">
               <a href="#">
                 <img src=${logoFrontend} alt="Logo Frontend Mentor" />
               </a>
@@ -70,8 +71,10 @@ document.querySelector('#app').innerHTML = `
           </ul>
         </section>
       </article>
-      <section id="latest-posts">
-        
+      <section id="latest-posts" class="border-t-1 border-neutral-200">  
+        <h2 class="my-[32px] text-[28px] font-black relative after:absolute after:bg-amber-600 after:w-[44px] after:h-[4px] after:bottom-[25%] after:left-[57%]">Latest Articles</h2>
+        <div id="posts">
+        </div>
       </section>
     </main>
     <footer class="bg-amber-800">
@@ -81,3 +84,4 @@ document.querySelector('#app').innerHTML = `
 `
 
 menuBtn(document.querySelector('#menu'),document.querySelector('#nav-mobile'));
+latestPosts(document.querySelector('#posts'));
