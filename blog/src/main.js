@@ -3,7 +3,6 @@ import logoX from './images/logo-x.svg';
 import logoGithub from './images/logo-github.svg';
 import logoLinkedin from './images/logo-linkedin.svg';
 import logoFrontend from './images/logo-frontend-mentor.svg';  
-import menuSvg from './images/icon-menu.svg'
 import moon from './images/icon-moon.svg'
 import logo from './images/image-avatar.jpg'
 import menuBtn from './utilities/menuBtn.js'
@@ -18,7 +17,8 @@ document.querySelector('#app').innerHTML = `
       </div>
       <div class="flex justify-center items-center gap-2">
         <button id="menu" type="button" class="p-2 dark:bg-neutral-900 rounded-[12px] size-10 transition-colors duration-300 ease-in-out flex justify-center items-center">
-          <img src=${menuSvg} alt="Menu" class/>
+          <svg id="menu-open" class="dark:text-white text-neutral-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.5 10h15m-15-5h15m-15 10h15"/></svg>
+          <svg id="menu-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#FEFEFE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 5 5 15M5 5l10 10"/></svg>
         </button>
         <nav id="nav-tablet" class="hidden">
           <ul class="">
