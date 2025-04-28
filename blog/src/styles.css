@@ -1,8 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import "tailwindcss";
+
 @layer base {
     body{
-        @apply font-dm-sans text-neutral-700;
+        font-family: "DM Sans", sans-serif;
+    }
+    
+    svg{
+        fill: currentColor;
+    }
+
+}
+@layer components{
+    body{
+        @apply text-neutral-600 dark:text-neutral-400;
+    }
+    h1,h2,h3,h4,h5,h6{
+        @apply dark:text-neutral-100;
+    }
+    .social-media-item{
+        @apply dark:bg-neutral-900 dark:border-0 bg-white flex justify-center items-center rounded-[12px] size-10 border-1 border-neutral-200 p-2;
+    }
+    .social-media-item a svg{
+        @apply dark:text-neutral-100;
     }
 }
 @theme{
