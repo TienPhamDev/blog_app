@@ -13,7 +13,7 @@
 }
 @layer components{
     body{
-        @apply text-neutral-600 dark:text-neutral-400;
+        @apply text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-900 transition-colors duration-300 ease-in-out;
     }
     h1,h2,h3,h4,h5,h6{
         @apply dark:text-neutral-100;
@@ -23,6 +23,9 @@
     }
     .social-media-item a svg{
         @apply dark:text-neutral-100;
+    }
+    footer .social-media-item{
+        @apply dark:bg-neutral-900 dark:border-0 bg-white flex justify-center items-center rounded-[12px] size-8 border-1 border-neutral-200 p-2;
     }
 }
 @theme{

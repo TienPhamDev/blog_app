@@ -6,18 +6,18 @@ import theme from './utilities/theme.js';
 import latestPosts from './render/latestPosts.js';
 
 document.querySelector('#app').innerHTML = `
-  <div class="container mx-auto bg-neutral-100 dark:bg-neutral-900 px-[16px] transition-colors duration-300 ease-in-out py-[16px]">
+  <div class="container md:w-[640px] mx-auto px-[16px] py-[16px]">
     <header class="flex dark:bg-neutral-800 border-1 border-neutral-200 dark:border-neutral-600 bg-white justify-between items-center p-1 rounded-[12px] ">
       <div id="logo">
         <img src=${logo} alt="Logo" class="size-10 rounded-[12px]"/>
       </div>
       <div class="flex justify-center items-center gap-2">
-        <button id="menu" type="button" class="p-2 dark:bg-neutral-900 rounded-[12px] size-10 transition-colors duration-300 ease-in-out flex justify-center items-center">
+        <button id="menu" type="button" class="md:hidden p-2 dark:bg-neutral-900 rounded-[12px] size-10 transition-colors duration-300 ease-in-out flex justify-center items-center">
           <svg id="menu-open" class="dark:text-white text-neutral-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.5 10h15m-15-5h15m-15 10h15"/></svg>
           <svg id="menu-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#FEFEFE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 5 5 15M5 5l10 10"/></svg>
         </button>
-        <nav id="nav-tablet" class="hidden">
-          <ul class="">
+        <nav id="nav-tablet" class="hidden md:block mx-4">
+          <ul class="flex gap-6">
             <li ><a href="#home">Home</a></li>
             <li ><a href="#about">Blog</a></li>
             <li ><a href="#contact">About</a></li>
@@ -40,7 +40,7 @@ document.querySelector('#app').innerHTML = `
             </ul>
           </nav>  
           <article class="mt-[16px]">
-            <h1 class="z-10 mb-[32px] font-black text-[32px] relative before:absolute before:bottom-[20%] before:z-[-10] before:w-[264px] before:h-[6px] before:bg-[#93cffc]">Hi ! I'm Tien Pham 👋</h1>
+            <h1 class="z-10 mb-[32px] font-black text-[32px] relative before:absolute before:bottom-[20%] before:z-[-10] before:w-[308px] before:h-[6px] before:bg-[#93cffc]">Hi ! I'm Tien Pham 👋</h1>
             <p>I’m on a journey to become a front-end web developer. I love building little projects, trying out new coding techniques, and sharing what I learn along the way. When I’m not at my desk, you’ll find me reading, hiking through the mountains, or challenging myself on rock-climbing walls.
       I started this blog to document my progress, keep myself accountable, and hopefully inspire anyone else who’s learning to code. Welcome to my corner of the internet, and thanks for stopping by!
             </p>
@@ -69,19 +69,21 @@ document.querySelector('#app').innerHTML = `
               </ul>
             </section>
           </article>
-          <section id="latest-posts" class="border-t-1 border-neutral-200 dark:border-neutral-600">  
-            <h2 class="my-[32px] text-[28px] font-black relative after:absolute after:bg-[#93cffc] after:w-[44px] after:h-[4px] after:bottom-[25%] after:left-[62%]">Latest Articles</h2>
+          <hr class="border-neutral-200 dark:border-neutral-600 "/>
+          <section id="latest-posts" class="">  
+            <h2 class="my-[32px] text-[28px] font-black relative after:absolute after:bg-[#93cffc] after:w-[44px] after:h-[4px] after:bottom-[25%] md:after:left-[38%] after:left-[62%]">Latest Articles</h2>
             <div id="posts">
             </div>
-            <div class="py-[16px] border-b-1 border-neutral-200 dark:border-neutral-600">
+            <div class="py-[16px] ">
               <h3><a href="#" class="text-lg border-b-4 border-[#93cffc]" >Views all articles</a></h3>
             </div>
           </section>
+          <hr class="border-neutral-200 dark:border-neutral-600 "/>
         </main>
-        <footer class="flex justify-between px-4 items-center ">
+        <footer class="flex justify-between px-4 items-center py-[16px]">
           <p>Made with ❤️ and ☕️.</p>
           <section id="social-media">
-              <ul class="flex gap-1 my-[32px] items-center">
+              <ul class="flex gap-1 items-center">
                 <li class="social-media-item">
                   <a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none" viewBox="0 0 18 16"><path fill="currentColor" d="m.399 0 6.6 8.825L.357 16h1.495l5.815-6.282L12.365 16h5.087l-6.971-9.321L16.663 0h-1.495L9.813 5.785 5.486 0H.399Zm2.198 1.101h2.337L15.254 14.9h-2.337L2.597 1.1Z"/></svg>
