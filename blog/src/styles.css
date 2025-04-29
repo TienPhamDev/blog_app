@@ -27,8 +27,12 @@
     footer .social-media-item{
         @apply dark:bg-neutral-900 dark:border-0 bg-white flex justify-center items-center rounded-[12px] size-8 border-1 border-neutral-200 p-2;
     }
+    .nav-link{
+        @apply hover:border-b-2 hover:border-spBlue transition duration-300 ease-in-out;
+    }
 }
 @theme{
     --font-dm-sans: 'DM Sans',san-serif;
+    --color-spBlue:#93cffc;
 }
 @custom-variant dark (&:where(.dark, .dark *));
