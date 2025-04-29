@@ -70,7 +70,7 @@ document.querySelector('#app').innerHTML = `
             </section>
           </article>
           <hr class="border-neutral-200 dark:border-neutral-600 "/>
-          <section id="latest-posts" class="">  
+          <section id="latest-posts" class="pb-[32px]">  
             <h2 class="my-[32px] text-[28px] font-black relative after:absolute after:bg-[#93cffc] after:w-[44px] after:h-[4px] after:bottom-[25%] md:after:left-[38%] after:left-[62%]">Latest Articles</h2>
             <div id="posts">
             </div>
