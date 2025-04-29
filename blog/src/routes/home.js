@@ -5,7 +5,7 @@ import menuBtn from '../utilities/menuBtn.js'
 import theme from '../utilities/theme.js';
 import latestPosts from '../render/latestPosts.js';
 import activeLink from '../utilities/activeLink.js';
- const Home = () => {
+const Home = () => {
     return `<div class="container md:w-[640px] mx-auto px-[16px] py-[16px]">
     <header class="flex dark:bg-neutral-800 border-1 border-neutral-200 dark:border-neutral-600 bg-white justify-between items-center p-1 rounded-[12px] ">
       <div id="logo">
@@ -115,4 +115,27 @@ import activeLink from '../utilities/activeLink.js';
 // theme(document.querySelector('#darkmode'));
 // latestPosts(document.querySelector('#posts'));
 // activeLink()
-export default Home;
+const initializeEvents = () => {
+    // Menu button toggle
+    const menuButton = document.querySelector('#menu');
+    const navMobile = document.querySelector('#nav-mobile');
+    if (menuButton && navMobile) {
+        menuBtn(menuButton, navMobile);
+    }
+
+    // Dark mode toggle
+    const darkModeButton = document.querySelector('#darkmode');
+    if (darkModeButton) {
+        theme(darkModeButton);
+    }
+
+    // Render latest posts
+    const postsContainer = document.querySelector('#posts');
+    if (postsContainer) {
+        latestPosts(postsContainer);
+    }
+
+    // Highlight active link
+    activeLink();
+};
+export {Home, initializeEvents};

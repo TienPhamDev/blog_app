@@ -1,30 +1,40 @@
-import Home from './routes/home';
+import { Home, initializeEvents } from './routes/home';
+// import Blog from './routes/blog';
 
 const routes = {
   '/': Home,
+  // '/blog': Blog,
 };
 
-function navigateTo(url) {
-  history.pushState(null, null, url);
+const navigateTo = (path) => {
+  history.pushState(null, null, path);
   router();
-}
+};
 
-function router() {
+const router = () => {
   const path = window.location.pathname;
-  console.log(`Navigating to ${path}`);
-  const page = routes[path] || (() => `<h1>404 - Not Found</h1>`);
-  document.getElementById('app').innerHTML = page();
-}
+  const page = routes[path] || (() => '<h1>404 Not Found</h1>');
+  
+  // Render the page content
+  document.querySelector('#app').innerHTML = page();
+  
+  // Initialize event listeners for the rendered content
+  initializeEvents();
+};
 
+// Handle browser navigation (back/forward buttons)
 window.addEventListener('popstate', router);
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.body.addEventListener('click', e => {
+// Handle initial page load and link navigation
+window.addEventListener('DOMContentLoaded', () => {
+  document.body.addEventListener('click', (e) => {
     if (e.target.matches('[data-link]')) {
       e.preventDefault();
-      navigateTo(e.target.href);
+      const path = e.target.href;
+      navigateTo(path);
     }
   });
 
-  router(); // Load the initial page
+  // Call the router to render the initial page
+  router();
 });
