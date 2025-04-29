@@ -18,10 +18,10 @@ import activeLink from '../utilities/activeLink.js';
         </button>
         <nav id="nav-tablet" class="hidden md:block mx-4">
           <ul class="flex gap-6">
-            <li ><a href="http://localhost:5173/" class="nav-link">Home</a></li>
-            <li ><a href="http://localhost:5173/blog" class="nav-link">Blog</a></li>
-            <li ><a href="http://localhost:5173/contact" class="nav-link">About</a></li>
-            <li ><a href="http://localhost:5173/newsletter" class="nav-link">Newsletter</a></li>
+            <li ><a href="http://localhost:5173/" data-link class="nav-link">Home</a></li>
+            <li ><a href="http://localhost:5173/blog" data-link class="nav-link">Blog</a></li>
+            <li ><a href="http://localhost:5173/contact" data-link class="nav-link">About</a></li>
+            <li ><a href="http://localhost:5173/newsletter" data-link class="nav-link">Newsletter</a></li>
           </ul>
         </nav>
         <button id="darkmode" type="button" class="bg-neutral-200 dark:bg-neutral-900 transition-colors duration-300 ease-in-out size-10 p-2 rounded-[12px] flex justify-center items-center">

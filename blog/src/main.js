@@ -11,6 +11,7 @@ function navigateTo(url) {
 
 function router() {
   const path = window.location.pathname;
+  console.log(`Navigating to ${path}`);
   const page = routes[path] || (() => `<h1>404 - Not Found</h1>`);
   document.getElementById('app').innerHTML = page();
 }
