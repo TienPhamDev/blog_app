@@ -1,9 +1,9 @@
-import { Home, initializeEvents } from './routes/home';
-// import Blog from './routes/blog';
+import { Home, initializeEventsHomePage } from './routes/home';
+import {Blog,initializeEventsBlogPage} from './routes/blog';
 
 const routes = {
   '/': Home,
-  // '/blog': Blog,
+  '/blog': Blog,
 };
 
 const navigateTo = (path) => {
@@ -19,7 +19,8 @@ const router = () => {
   document.querySelector('#app').innerHTML = page();
   
   // Initialize event listeners for the rendered content
-  initializeEvents();
+  if (path === '/') initializeEventsHomePage(path);
+  if (path === '/blog') initializeEventsBlogPage(path);
 };
 
 // Handle browser navigation (back/forward buttons)
