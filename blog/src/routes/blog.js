@@ -5,6 +5,7 @@ import menuBtn from '../utilities/menuBtn.js'
 import theme from '../utilities/theme.js';
 import latestPosts from '../render/latestPosts.js';
 import activeLink from '../utilities/activeLink.js';
+import URL from './domainURL.js';
 const Blog = () => {
   const htmlContent = `
   <div class="container md:w-[640px] mx-auto px-[16px] py-[16px]">
@@ -19,10 +20,10 @@ const Blog = () => {
         </button>
         <nav id="nav-tablet" class="hidden md:block mx-4">
           <ul class="flex gap-6">
-            <li ><a href="http://localhost:5173/" data-link class="nav-link">Home</a></li>
-            <li ><a href="http://localhost:5173/blog" data-link class="nav-link">Blog</a></li>
-            <li ><a href="http://localhost:5173/contact" data-link class="nav-link">About</a></li>
-            <li ><a href="http://localhost:5173/newsletter" data-link class="nav-link">Newsletter</a></li>
+            <li ><a href="${URL}" data-link class="nav-link">Home</a></li>
+            <li ><a href="${URL}blog" data-link class="nav-link">Blog</a></li>
+            <li ><a href="${URL}contact" data-link class="nav-link">About</a></li>
+            <li ><a href="${URL}newsletter" data-link class="nav-link">Newsletter</a></li>
           </ul>
         </nav>
         <button id="darkmode" type="button" class="bg-neutral-200 dark:bg-neutral-900 transition-colors duration-300 ease-in-out size-10 p-2 rounded-[12px] flex justify-center items-center">
@@ -34,14 +35,14 @@ const Blog = () => {
         <main class="mx-2 pt-4 px-2">
           <nav id="nav-mobile" class="hidden left-[-7%] w-[114%] relative mb-[16px]">
             <ul class="bg-white border-1 border-neutral-200 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 px-4 text-[18px] tracking-[-0.2px] rounded-[12px] leading-[150%] text-neutral-600 font-light">
-              <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="#home">Home</a></li>
-              <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="#about">Blog</a></li>
-              <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="#contact">About</a></li>
-              <li class='py-2'><a href="#newsletter">Newsletter</a></li>
+              <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="${URL}" data-link >Home</a></li>
+              <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="${URL}blog" data-link >Blog</a></li>
+              <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="${URL}contact" data-link >About</a></li>
+              <li class='py-2'><a href="${URL}newsletter" data-link >Newsletter</a></li>
             </ul>
           </nav>  
-          <article class="mt-[16px]">
-            <h1 class="my-[32px] text-[28px] font-black relative after:absolute after:bg-[#93cffc] after:w-[44px] after:h-[4px] after:bottom-[25%] md:after:left-[38%] after:left-[62%]">Latest Articles</h1>
+          <article class="mt-[16px] mb-[32px]">
+            <h1 class="text-[28px] mb-[16px] font-black relative after:absolute after:bg-[#93cffc] after:w-[44px] after:h-[4px] after:bottom-[25%] md:after:left-[38%] after:left-[62%]">Latest Articles</h1>
             <p>Below are all my blog posts. Click on any title to read the full article.
             </p>
           </article>
