@@ -45,6 +45,8 @@ const Home = () => {
             <p>I’m on a journey to become a front-end web developer. I love building little projects, trying out new coding techniques, and sharing what I learn along the way. When I’m not at my desk, you’ll find me reading, hiking through the mountains, or challenging myself on rock-climbing walls.
       I started this blog to document my progress, keep myself accountable, and hopefully inspire anyone else who’s learning to code. Welcome to my corner of the internet, and thanks for stopping by!
             </p>
+            <p>When I’m not coding, I love getting lost in a good book. My taste is pretty eclectic: I’ll happily read everything from fantasy novels to biographies of tech pioneers. Reading helps me unwind and often sparks new ideas for my coding projects.
+            </p>
             <section id="social-media">
               <ul class="flex gap-4 my-[32px] items-center">
                 <li class="social-media-item">
