@@ -6,7 +6,7 @@ import theme from '../utilities/theme.js';
 import latestPosts from '../render/latestPosts.js';
 import activeLink from '../utilities/activeLink.js';
 import URL from './domainURL.js';
-const Blog = () => {
+const About = () => {
   const htmlContent = `
   <div class="container md:w-[640px] mx-auto px-[16px] py-[16px]">
     <header class="flex dark:bg-neutral-800 border-1 border-neutral-200 dark:border-neutral-600 bg-white justify-between items-center p-1 rounded-[12px] ">
@@ -40,7 +40,7 @@ const Blog = () => {
               <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="${URL}about" data-link >About</a></li>
               <li class='py-2'><a href="${URL}newsletter" data-link >Newsletter</a></li>
             </ul>
-          </nav>  
+          </nav>
           <article class="mt-[16px] mb-[32px]">
             <h1 class="text-[28px] mb-[16px] font-black relative after:absolute after:bg-[#93cffc] after:w-[44px] after:h-[4px] after:bottom-[25%] md:after:left-[38%] after:left-[62%]">Latest Articles</h1>
             <p>Below are all my blog posts. Click on any title to read the full article.
@@ -85,7 +85,7 @@ const Blog = () => {
 `
   return htmlContent;
 }
-const initializeEventsBlogPage = (path) => {
+const initializeEventsAboutPage = (path) => {
       // Menu button toggle
       const menuButton = document.querySelector('#menu');
       const navMobile = document.querySelector('#nav-mobile');
@@ -103,9 +103,8 @@ const initializeEventsBlogPage = (path) => {
       if (postsContainer) {
         latestPosts(path,postsContainer);
       }
-      
   
       // Highlight active link
       activeLink();
 }
-export { Blog, initializeEventsBlogPage };
+export { About, initializeEventsAboutPage };

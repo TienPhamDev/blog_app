@@ -21,7 +21,7 @@ const Home = () => {
           <ul class="flex gap-6">
             <li ><a href="${URL}" data-link class="nav-link">Home</a></li>
             <li ><a href="${URL}blog" data-link class="nav-link">Blog</a></li>
-            <li ><a href="${URL}contact" data-link class="nav-link">About</a></li>
+            <li ><a href="${URL}about" data-link class="nav-link">About</a></li>
             <li ><a href="${URL}newsletter" data-link class="nav-link">Newsletter</a></li>
           </ul>
         </nav>
@@ -36,7 +36,7 @@ const Home = () => {
             <ul class="bg-white border-1 border-neutral-200 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 px-4 text-[18px] tracking-[-0.2px] rounded-[12px] leading-[150%] text-neutral-600 font-light">
               <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="${URL}" data-link >Home</a></li>
               <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="${URL}blog" data-link >Blog</a></li>
-              <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="${URL}contact" data-link >About</a></li>
+              <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="${URL}about" data-link >About</a></li>
               <li class='py-2'><a href="${URL}newsletter" data-link >Newsletter</a></li>
             </ul>
           </nav>  
