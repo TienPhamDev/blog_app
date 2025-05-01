@@ -76,7 +76,7 @@ const Home = () => {
             <div id="posts">
             </div>
             <div class="py-[16px] ">
-              <h3><a href="#" class="text-lg border-b-4 border-[#93cffc]" >Views all articles</a></h3>
+              <h3><a href="${URL}blog" class="text-lg border-b-4 border-[#93cffc]" >Views all articles</a></h3>
             </div>
           </section>
           <hr class="border-neutral-200 dark:border-neutral-600 "/>
