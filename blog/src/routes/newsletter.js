@@ -46,7 +46,7 @@ const Newsletter = () => {
               <p class="text-neutral-600 text-[20px] dark:text-white my-[16px]">I’d love to have you along for the ride and also hear about your own journey!</p>
               <form>
                   <label for="email" class="text-neutral-600 dark:text-neutral-400 ">Email Address:</label>
-                  <input type="email" id="email" name="email" placeholder="email@example.com" class="w-full py-2 px-4 focus:border-green-700 outline-none border-1 bg-white border-neutral-200 dark:border-neutral-600 dark:bg-neutral-900 dark:text-white rounded-md mt-[8px] mb-[16px] transition-all duration-300 ease-in-out" required>
+                  <input type="email" id="email" name="email" placeholder="email@example.com" class="w-full py-2 px-4 focus:border-green-700 outline-none border-1 bg-white border-neutral-200 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white rounded-md mt-[8px] mb-[16px] transition-all duration-300 ease-in-out" required>
                   <button type="submit" class="bg-spBlue text-neutral-700 py-2 px-4 rounded-md hover:bg-spBlue-800 transition-colors duration-300 ease-in-out">Stay Updated</button>
               </form>
               <p class="my-2">Unsubscribe anytime. No spam, I promise.</p>
