@@ -30,8 +30,8 @@ const Newsletter = () => {
         </button>
       </div>
     </header>
-      <div class="border-1 border-t-0 border-b-0 border-neutral-200 dark:border-neutral-600 mx-2 flex flex-col h-screen justify-between">
-        <main class="mx-2 pt-4 px-2 grow">
+      <div class="border-1 border-t-0 border-b-0 border-neutral-200 dark:border-neutral-600 mx-2 flex flex-col h-full justify-between">
+        <main class="mx-2 pt-4 px-2 ">
           <nav id="nav-mobile" class="hidden left-[-7%] w-[114%] relative mb-[16px]">
             <ul class="bg-white border-1 border-neutral-200 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 px-4 text-[18px] tracking-[-0.2px] rounded-[12px] leading-[150%] text-neutral-600 font-light">
               <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="${URL}" data-link >Home</a></li>
@@ -46,13 +46,14 @@ const Newsletter = () => {
               <p class="text-neutral-600 text-[20px] dark:text-white my-[16px]">I’d love to have you along for the ride and also hear about your own journey!</p>
               <form>
                   <label for="email" class="text-neutral-600 dark:text-neutral-400 ">Email Address:</label>
-                  <input type="email" id="email" name="email" placeholder="email@example.com" class="w-full py-2 px-4 outline-green-700 border-1 bg-white border-neutral-200 dark:border-neutral-600 dark:bg-neutral-900 dark:text-white rounded-md mt-[8px] mb-[16px] transition-all duration-300 ease-in-out" required>
+                  <input type="email" id="email" name="email" placeholder="email@example.com" class="w-full py-2 px-4 focus:border-green-700 outline-none border-1 bg-white border-neutral-200 dark:border-neutral-600 dark:bg-neutral-900 dark:text-white rounded-md mt-[8px] mb-[16px] transition-all duration-300 ease-in-out" required>
                   <button type="submit" class="bg-spBlue text-neutral-700 py-2 px-4 rounded-md hover:bg-spBlue-800 transition-colors duration-300 ease-in-out">Stay Updated</button>
               </form>
+              <p class="my-2">Unsubscribe anytime. No spam, I promise.</p>
           </article>
-          <hr class="border-neutral-200 dark:border-neutral-600 mt-[124px]"/>
+          <hr class="border-neutral-200 dark:border-neutral-600 mt-[96px]"/>
         </main>
-        <footer class="flex justify-between px-4 items-center py-[16px] flex-none ">
+        <footer class="flex justify-between px-4 items-center py-[16px] ">
           <p>Made with ❤️ and ☕️.</p>
           <section id="social-media">
               <ul class="flex gap-1 items-center">
