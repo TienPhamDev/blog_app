@@ -59,9 +59,10 @@ const About = () => {
             <div class="about-img">
 
             </div>
+            <p class="my-[16px]">I hope this blog not only documents my growth but also helps others see that coding can be for everyone. Thanks for joining me on this journey!</p>
         </article>
-          <hr class="border-neutral-200 dark:border-neutral-600 "/>
             <section id="social-media">
+            <h2 class="font-bold text-[24px] dark:text-neutral-200 text-neutral-600">Following Me</h2>
               <ul class="flex gap-4 my-[32px] items-center">
                 <li class="social-media-item">
                   <a href="#">

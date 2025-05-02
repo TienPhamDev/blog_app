@@ -34,5 +34,6 @@
 @theme{
     --font-dm-sans: 'DM Sans',san-serif;
     --color-spBlue:#93cffc;
+    --color-spBlue-800:#5792c0;
 }
 @custom-variant dark (&:where(.dark, .dark *));

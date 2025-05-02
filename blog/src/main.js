@@ -1,10 +1,12 @@
 import { Home, initializeEventsHomePage } from './routes/home';
 import { Blog, initializeEventsBlogPage } from './routes/blog';
 import { About , initializeEventsAboutPage } from './routes/about';
+import { Newsletter,initializeEventsNewsPage } from './routes/newsletter';
 const routes = {
   '/': Home,
   '/blog': Blog,
-  "/about": About
+  "/about": About,
+  '/newsletter': Newsletter,
 };
 
 const navigateTo = (path) => {
@@ -23,6 +25,7 @@ const router = () => {
   if (path === '/') initializeEventsHomePage(path);
   if (path === '/blog') initializeEventsBlogPage(path);
   if (path === '/about') initializeEventsAboutPage(path);
+  if (path === '/newsletter') initializeEventsNewsPage(path);
 };
 
 // Handle browser navigation (back/forward buttons)
