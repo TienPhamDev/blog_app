@@ -7,8 +7,10 @@ import activeLink from "../utilities/activeLink.js";
 import URL from "./domainURL.js";
 import data from "../data.json";
 import formatDate from "../utilities/formatDate.js";
+import { formatBlogContent } from "../utilities/formatBlogContent.js";
 const Post = (slug) => {
   const singlePost = data.find((item) => item.slug === slug);
+
   const htmlContent = `
   <div class="container md:w-[640px] mx-auto px-[16px] py-[16px]">
     <header class="flex dark:bg-neutral-800 border-1 border-neutral-200 dark:border-neutral-600 bg-white justify-between items-center p-1 rounded-[12px] ">
@@ -53,7 +55,7 @@ const Post = (slug) => {
           
           <section id="latest-posts" class="pb-[32px]">  
             <div id="content" class="content">
-            ${singlePost.content}
+            ${formatBlogContent(singlePost.content)}
             </div>
           </section>
           
