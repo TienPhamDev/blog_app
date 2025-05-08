@@ -2,6 +2,7 @@ import { Home, initializeEventsHomePage } from './routes/home';
 import { Blog, initializeEventsBlogPage } from './routes/blog';
 import { About , initializeEventsAboutPage } from './routes/about';
 import { Newsletter,initializeEventsNewsPage } from './routes/newsletter';
+import { Post, initializeEventsPostPage } from './routes/post';
 const routes = {
   '/': Home,
   '/blog': Blog,
@@ -16,6 +17,17 @@ const navigateTo = (path) => {
 
 const router = () => {
   const path = window.location.pathname;
+  
+  //check for dynamic routes
+  if (path.includes('/post/')) {
+    const slug = path.split('/').pop();
+
+    const post = Post(slug);
+    document.querySelector('#app').innerHTML = post;
+    initializeEventsPostPage(slug);
+    return;
+  }
+  //handle static routes
   const page = routes[path] || (() => '<h1>404 Not Found</h1>');
   
   // Render the page content

@@ -1,7 +1,7 @@
 const activeLink = () => {
     const links = document.querySelectorAll('.nav-link');
     const currentPath = location.href;
-    console.log(currentPath);
+    
     links.forEach(link => {
         if (link.getAttribute('href') === currentPath) {
         link.classList.add('font-bold',"border-b-2",'dark:text-white',"border-b-spBlue");
