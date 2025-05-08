@@ -1,14 +1,15 @@
-import '../styles.css'
-import moon from '../images/icon-moon.svg'
-import logo from '../images/image-avatar.jpg'
-import menuBtn from '../utilities/menuBtn.js'
-import theme from '../utilities/theme.js';
-import activeLink from '../utilities/activeLink.js';
-import URL from './domainURL.js';
-import data from '../data.json';
-const Post = () => {
-    // const post = data.find((item) => item.slug === slug);
-    const htmlContent =`
+import "../styles.css";
+import moon from "../images/icon-moon.svg";
+import logo from "../images/image-avatar.jpg";
+import menuBtn from "../utilities/menuBtn.js";
+import theme from "../utilities/theme.js";
+import activeLink from "../utilities/activeLink.js";
+import URL from "./domainURL.js";
+import data from "../data.json";
+import formatDate from "../utilities/formatDate.js";
+const Post = (slug) => {
+  const singlePost = data.find((item) => item.slug === slug);
+  const htmlContent = `
   <div class="container md:w-[640px] mx-auto px-[16px] py-[16px]">
     <header class="flex dark:bg-neutral-800 border-1 border-neutral-200 dark:border-neutral-600 bg-white justify-between items-center p-1 rounded-[12px] ">
       <div id="logo">
@@ -43,16 +44,19 @@ const Post = () => {
             </ul>
           </nav>  
           <article class="mt-[16px] mb-[32px]">
-            <h1 class="title text-[28px] mb-[16px] font-black relative after:absolute after:bg-[#93cffc] after:w-[44px] after:h-[4px] after:bottom-[25%] md:after:left-[38%] after:left-[62%]">Post</h1>
-            <p class="description">Below are all my blog posts. Click on any title to read the full article.
+            <h1 class="title text-[28px] mb-[16px] font-black relative ">${
+              singlePost.title
+            }</h1>
+            <p class="description">${formatDate(singlePost.publishedAt)}</p>
             </p>
           </article>
-          <hr class="border-neutral-200 dark:border-neutral-600 "/>
+          
           <section id="latest-posts" class="pb-[32px]">  
             <div id="content" class="content">
+            ${singlePost.content}
             </div>
           </section>
-          <hr class="border-neutral-200 dark:border-neutral-600 "/>
+          
         </main>
         <footer class="flex justify-between px-4 items-center py-[16px]">
           <p>Made with ❤️ and ☕️.</p>
@@ -83,27 +87,24 @@ const Post = () => {
         </footer>
       </div>
   </div>
-    `
-    return htmlContent;
-}
+    `;
+  return htmlContent;
+};
 
 const initializeEventsPostPage = (path) => {
-    // Menu button toggle
-    const menuButton = document.querySelector('#menu');
-    const navMobile = document.querySelector('#nav-mobile');
-    
-    menuBtn(menuButton, navMobile);
-    
+  // Menu button toggle
+  const menuButton = document.querySelector("#menu");
+  const navMobile = document.querySelector("#nav-mobile");
 
-    // Dark mode toggle
-    const darkModeButton = document.querySelector('#darkmode');
-    theme(darkModeButton);
-    
+  menuBtn(menuButton, navMobile);
 
-    // Render latest posts
-    
+  // Dark mode toggle
+  const darkModeButton = document.querySelector("#darkmode");
+  theme(darkModeButton);
 
-    // Highlight active link
-    activeLink();
-}
+  // Render latest posts
+
+  // Highlight active link
+  activeLink();
+};
 export { Post, initializeEventsPostPage };

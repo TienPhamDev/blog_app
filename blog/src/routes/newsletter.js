@@ -30,8 +30,8 @@ const Newsletter = () => {
         </button>
       </div>
     </header>
-      <div class="border-1 border-t-0 border-b-0 border-neutral-200 dark:border-neutral-600 mx-2 flex flex-col h-full justify-between">
-        <main class="mx-2 pt-4 px-2 ">
+      <div class="border-1 border-t-0 border-b-0 border-neutral-200 dark:border-neutral-600 mx-2 flex flex-col h-screen justify-between">
+        <main class="mx-2 pt-4 px-2 grow">
           <nav id="nav-mobile" class="hidden left-[-7%] w-[114%] relative mb-[16px]">
             <ul class="bg-white border-1 border-neutral-200 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 px-4 text-[18px] tracking-[-0.2px] rounded-[12px] leading-[150%] text-neutral-600 font-light">
               <li class='border-b-1 border-neutral-200 dark:border-neutral-600 py-2'><a href="${URL}" data-link >Home</a></li>
@@ -51,8 +51,9 @@ const Newsletter = () => {
               </form>
               <p class="my-2">Unsubscribe anytime. No spam, I promise.</p>
           </article>
-          <hr class="border-neutral-200 dark:border-neutral-600 mt-[96px]"/>
         </main>
+        <hr class="mx-4 border-neutral-200 dark:border-neutral-600 mt-[96px]"/>
+
         <footer class="flex justify-between px-4 items-center py-[16px] ">
           <p>Made with ❤️ and ☕️.</p>
           <section id="social-media">
@@ -95,7 +96,6 @@ const initializeEventsNewsPage = (path) => {
   // Dark mode toggle
   const darkModeButton = document.querySelector("#darkmode");
   theme(darkModeButton);
-
 
   // Highlight active link
   activeLink();
