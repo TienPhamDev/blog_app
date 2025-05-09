@@ -7,7 +7,7 @@ import activeLink from "../utilities/activeLink.js";
 import URL from "./domainURL.js";
 import data from "../data.json";
 import formatDate from "../utilities/formatDate.js";
-// import { formatBlogContent } from "../utilities/formatBlogContent.js";
+
 import handleMarkDown from "../utilities/handleMarkDown.js";
 const Post = (slug) => {
   const singlePost = data.find((item) => item.slug === slug);
@@ -50,15 +50,13 @@ const Post = (slug) => {
             <h1 class="title text-[28px] mb-[16px] font-black relative ">${
               singlePost.title
             }</h1>
-            <p class="description">${formatDate(singlePost.publishedAt)}</p>
-            </p>
-          </article>
-          
-          <section id="latest-posts" class="pb-[32px]">  
-            <div id="content" class="content">
-            ${handleMarkDown(singlePost.content)}
+            <span class="description">
+                ${formatDate(singlePost.publishedAt)}
+            </span>
+            <div id="single-post-content" class="content">
+                ${handleMarkDown(singlePost.content)}
             </div>
-          </section>
+          </article>
           
         </main>
         <footer class="flex justify-between px-4 items-center py-[16px]">
