@@ -75,6 +75,9 @@
     #single-post-content blockquote{
         @apply border-l-4 border-neutral-500 pl-4 italic my-[16px];
     }
+    #single-post-content blockquote cite{
+        @apply bg-amber-300;
+    }
 
 }
 @theme{
