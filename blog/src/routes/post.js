@@ -46,14 +46,14 @@ const Post = (slug) => {
               <li class='py-2'><a href="${URL}newsletter" data-link >Newsletter</a></li>
             </ul>
           </nav>  
-          <article class="mt-[16px] mb-[32px]">
+          <article id="single-post-content" class="mt-[16px] mb-[32px]">
             <h1 class="title text-[28px] mb-[16px] font-black relative ">${
               singlePost.title
             }</h1>
             <span class="description">
                 ${formatDate(singlePost.publishedAt)}
             </span>
-            <div id="single-post-content" class="content">
+            <div  class="content">
                 ${handleMarkDown(singlePost.content)}
             </div>
           </article>
